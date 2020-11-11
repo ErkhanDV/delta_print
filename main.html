@@ -9,84 +9,86 @@
 
 <body>
 
-	<div id="writeln_form">
-		<form>		
+  <div id="writeln_form">
+    <form>    
 
-			<label for="ooo">Укажите юридическое лицо клиента:</label>
+      <label for="ooo">Укажите юридическое лицо клиента:</label>
+      <input name="ooo" type="text" maxlength="99" size="50" placeholder="ООО Рога и копыта">
+      
+      <label for="gendir">в лице ген. директора</label>
+      <input name="gendir" type="text" maxlength="99" size="50" placeholder="Иванов Иван Иванович">
+    
+      <label for="inn">ИНН:&nbsp;</label>
+      <input name="inn" type="text" maxlength="12" size="44" placeholder="660000000000">
+    
+      <label for="do">Введите номер договора охраны:</label>
+      <input name="do" type="text" maxlength="13" size="10" placeholder="66-2001-00000">
 
-			<input name="ooo" type="text" maxlength="99" size="50" placeholder="ООО Рога и копыта">
-			
-			<label for="gendir">в лице ген. директора</label>
+      <label for="dm">Введите номер договора монтажа:</label>
+      <input name="dm" type="text" maxlength="13" size="10" placeholder="66-2003-00000">
 
-			<input name="gendir" type="text" maxlength="99" size="50" placeholder="Иванов Иван Иванович">
+      <label for="dm_summa">Введите сумму договора монтажа:</label>
+      <input name="dm_summa" type="text" maxlength="5" size="5" placeholder="20000"><a>&nbsp;&#8381;</a>
 
-		
-			<label for="inn">ИНН:&nbsp;</label>
+      <label for="ap">Укажите сумму абонентской платы:</label>
+      <input name="ap" type="text" maxlength="5" size="6" placeholder="2000"><a>&nbsp;&#8381;</a>
 
-			<input name="inn" type="text" maxlength="12" size="44" placeholder="660000000000">
-		
-			<label for="do">Введите номер договора охраны:</label>
+      <p>Выберите комплекс услуг:</p>
+    
+      <input name="mts_1" type="checkbox"> 
+      <label for="mts_1">Мониторинг тревожных сообщений</label>
+  
+      <input name="os" type="checkbox">
+      <label for="os">Охранная сигнализация</label>
 
-			<input name="do" type="text" maxlength="13" size="10" placeholder="66-2001-00000">
+      <input name="ts" type="checkbox">
+      <label for="ts">Тревожная сигнализация</label>
+      
+      <input name="sms" type="checkbox">
+      <label for="sms">SMS-оповещения о постановке/снятии</label>
 
-			<label for="dm">Введите номер договора монтажа:</label>
+      <input name="mts_2" type="checkbox">
+      <label for="mts_2">Мониторинг технологических сообщений</label>
 
-			<input name="dm" type="text" maxlength="13" size="10" placeholder="66-2003-00000">
+      <input name="ps" type="checkbox">
+      <label for="ps">Оповещение о пожаре</label>
+      
+      <input name="220" type="checkbox">
+      <label for="220">Сигнализация об отсутствии 220В</label>
+  
+      <input name="wl" type="checkbox">
+      <label for="wl">Сигнализация о протечке воды</label>
+  
+      <input name="gl" type="checkbox">
+      <label for="gl">Сигнализация об утечке газа</label>
 
-			<label for="dm_summa">Введите сумму договора монтажа:</label>
+      <input name="so" type="checkbox">
+      <label for="so">Сервисное обслуживание</label>
+  
+      <p>Укажите время реагирования:</p>
 
-			<input name="dm_summa" type="text" maxlength="5" size="5" placeholder="20000"><a>&nbsp;&#8381;</a>
+      <label for="dt">Днём</label>  
+      <input name="dt" type="text" maxlength="2" size="1" placeholder="10">
 
-			<label for="ap">Укажите сумму абонентской платы:</label>
+      <label for="nt">Ночью</label>
+      <input name="nt" type="text" maxlength="2" size="1" placeholder="8">
 
-			<input name="ap" type="text" maxlength="5" size="6" placeholder="2000"><a>&nbsp;&#8381;</a>
+      <label for="gorod">Укажите город:</label>      
+      <input name="gorod" type="text" maxlength="20" size="10" placeholder="Екатеринбург">
 
-			<label for="ku">Выберите комплекс услуг:</label>
-		
-			<input name="mts_1" type="checkbox">Мониторинг тревожных сообщений
-	
-			<input name="os" type="checkbox">Охранная сигнализация
+      <label for="ulitsa">Укажите улицу:</label>
+      <input name="ulitsa" type="text" maxlength="20" size="20" placeholder="Академика Сахарова">
 
-			<input name="ts" type="checkbox">Тревожная сигнализация
-			
-			<input name="sms" type="checkbox">SMS-оповещения о постановке/снятии
+      <label for="dom">Укажите номер дома:</label>
+      <input name="dom" type="text" maxlength="5" size="2" placeholder="30Б">
 
-			<input name="mts_2" type="checkbox">Мониторинг технологических сообщений
+      <label for="ofis">Укажите номер офиса</label>
+      <input name="ofis" type="text" maxlength="6" size="3" placeholder="710">
 
-			<input name="ps" type="checkbox">Оповещение о пожаре
-			
-			<input name="220" type="checkbox">Сигнализация об отсутствии 220В
-	
-			<input name="wl" type="checkbox">Сигнализация о протечке воды
-	
-			<input name="gl" type="checkbox">Сигнализация об утечке газа
+      <input type="submit" value="Печать">
 
-			<input name="so" type="checkbox">Сервисное обслуживание
-	
-			<label for="dt" for="nt">Укажите время реагирования днём/ночью:</label>
-	
-			<input name="dt" maxlength="2" size="1" placeholder="10">&nbsp;&nbsp;&frasl;&nbsp;&nbsp;<input name="nt" maxlength="2" size="1" placeholder="8">
-
-			<label for="gorod">Укажите город:</label>
-			
-			<input name="gorod" type="text" maxlength="20" size="10" placeholder="Екатеринбург">
-
-			<label for="ulitsa">Укажите улицу:</label>
-
-			<input name="ulitsa" type="text" maxlength="20" size="20" placeholder="Академика Сахарова">
-
-			<label for="dom">Укажите номер дома:</label>
-
-			<input name="dom" type="text" maxlength="5" size="2" placeholder="30Б">
-
-			<label for="ofis">Укажите номер офиса</label>
-
-			<input name="ofis" type="text" maxlength="6" size="3" placeholder="710">
-
-			<input type="submit" value="Печать">
-
-		</form>
-	</div>
+    </form>
+  </div>
 </body>
 
 </html>
