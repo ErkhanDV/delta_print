@@ -4,6 +4,7 @@
     
     <meta charset="utf-8">
     <title>Delta_printer</title>
+    <link href="src/css/main.css" rel="stylesheet">
 
 </head>
 
@@ -11,79 +12,129 @@
 
   <div id="writeln_form">
     <form>    
-
-      <label for="ooo">Укажите юридическое лицо клиента:</label>
-      <input name="ooo" type="text" maxlength="99" size="50" placeholder="ООО Рога и копыта">
+      <div class="for_user">
+        <label for="ooo">Укажите юридическое лицо клиента:</label>
+        <input name="ooo" type="text" maxlength="99" size="50" placeholder="ООО Рога и копыта">
+      </div>
       
-      <label for="gendir">в лице ген. директора</label>
-      <input name="gendir" type="text" maxlength="99" size="50" placeholder="Иванов Иван Иванович">
+      <div class="for_user">
+        <label for="gendir">в лице ген. директора</label>
+        <input name="gendir" type="text" maxlength="99" size="50" placeholder="Иванов Иван Иванович">
+      </div>
+      
+      <div class="for_user">
+        <label for="inn">ИНН:&nbsp;</label>
+        <input name="inn" type="text" maxlength="12" size="10" placeholder="660000000000">
+      </div>
     
-      <label for="inn">ИНН:&nbsp;</label>
-      <input name="inn" type="text" maxlength="12" size="44" placeholder="660000000000">
-    
-      <label for="do">Введите номер договора охраны:</label>
-      <input name="do" type="text" maxlength="13" size="10" placeholder="66-2001-00000">
+      <div class="for_user">
+        <label for="do">Введите номер договора охраны:</label>
+        <input name="do" type="text" maxlength="13" size="10" placeholder="66-2001-00000">
+      </div>
 
-      <label for="dm">Введите номер договора монтажа:</label>
-      <input name="dm" type="text" maxlength="13" size="10" placeholder="66-2003-00000">
+      <div class="for_user">
+        <label for="dm">Введите номер договора монтажа:</label>
+        <input name="dm" type="text" maxlength="13" size="10" placeholder="66-2003-00000">
+      </div>
 
-      <label for="dm_summa">Введите сумму договора монтажа:</label>
-      <input name="dm_summa" type="text" maxlength="5" size="5" placeholder="20000"><a>&nbsp;&#8381;</a>
+      <div class="for_user">
+        <label for="dm_summa">Введите сумму договора монтажа:</label>
+        <input name="dm_summa" type="text" maxlength="5" size="5" placeholder="20000"><a>&nbsp;&#8381;</a>
+      </div>
 
-      <label for="ap">Укажите сумму абонентской платы:</label>
-      <input name="ap" type="text" maxlength="5" size="6" placeholder="2000"><a>&nbsp;&#8381;</a>
+      <div class="for_user">
+        <label for="ap">Укажите сумму абонентской платы:</label>
+        <input name="ap" type="text" maxlength="5" size="6" placeholder="2000"><a>&nbsp;&#8381;</a>
+      </div>
 
       <p>Выберите комплекс услуг:</p>
-    
-      <input name="mts_1" type="checkbox"> 
-      <label for="mts_1">Мониторинг тревожных сообщений</label>
-  
-      <input name="os" type="checkbox">
-      <label for="os">Охранная сигнализация</label>
-
-      <input name="ts" type="checkbox">
-      <label for="ts">Тревожная сигнализация</label>
       
-      <input name="sms" type="checkbox">
-      <label for="sms">SMS-оповещения о постановке/снятии</label>
-
-      <input name="mts_2" type="checkbox">
-      <label for="mts_2">Мониторинг технологических сообщений</label>
-
-      <input name="ps" type="checkbox">
-      <label for="ps">Оповещение о пожаре</label>
+      <div class="for_user">
+        <input name="mts_1" type="checkbox"> 
+        <label for="mts_1">Мониторинг тревожных сообщений</label>
+      </div>
       
-      <input name="220" type="checkbox">
-      <label for="220">Сигнализация об отсутствии 220В</label>
-  
-      <input name="wl" type="checkbox">
-      <label for="wl">Сигнализация о протечке воды</label>
-  
-      <input name="gl" type="checkbox">
-      <label for="gl">Сигнализация об утечке газа</label>
+      <div class="for_user">
+        <input name="os" type="checkbox">
+        <label for="os">Охранная сигнализация</label>
+      </div>
 
-      <input name="so" type="checkbox">
-      <label for="so">Сервисное обслуживание</label>
+      <div class="for_user">  
+        <input name="ts" type="checkbox">
+        <label for="ts">Тревожная сигнализация</label>
+      </div>
+      
+      <div class="for_user">
+        <input name="sms" type="checkbox">
+        <label for="sms">SMS-оповещения о постановке/снятии</label>
+      </div>
+
+      <div class="for_user">
+        <input name="mts_2" type="checkbox">
+        <label for="mts_2">Мониторинг технологических сообщений</label>
+      </div>
+
+      <div class="for_user">
+        <input name="ps" type="checkbox">
+        <label for="ps">Оповещение о пожаре</label>
+      </div>
+      
+      <div class="for_user">
+        <input name="220" type="checkbox">
+        <label for="220">Сигнализация об отсутствии 220В</label>
+      </div>
+      
+      <div class="for_user">
+        <input name="wl" type="checkbox">
+        <label for="wl">Сигнализация о протечке воды</label>
+      </div>
+
+      <div class="for_user">
+        <input name="gl" type="checkbox">
+        <label for="gl">Сигнализация об утечке газа</label>
+      </div>
+
+      <div class="for_user">
+        <input name="so" type="checkbox">
+        <label for="so">Сервисное обслуживание</label>
+      </div>
+      
+      <div class="for_user">
+        <label for="dnr">Укажите дату начала реагирования:</label>  
+        <input name="dnr" type="text" maxlength="10" size="7" placeholder="01.01.2020">
+      </div>
   
       <p>Укажите время реагирования:</p>
 
-      <label for="dt">Днём</label>  
-      <input name="dt" type="text" maxlength="2" size="1" placeholder="10">
+      <div class="for_user">
+        <label for="dt">Днём:</label>  
+        <input name="dt" type="text" maxlength="2" size="1" placeholder="10">
+      </div>
 
-      <label for="nt">Ночью</label>
-      <input name="nt" type="text" maxlength="2" size="1" placeholder="8">
+      <div class="for_user">
+        <label for="nt">Ночью:</label>
+        <input name="nt" type="text" maxlength="2" size="1" placeholder="8">
+      </div>
 
-      <label for="gorod">Укажите город:</label>      
-      <input name="gorod" type="text" maxlength="20" size="10" placeholder="Екатеринбург">
+      <div class="for_user">
+        <label for="gorod">Укажите город:</label>      
+        <input name="gorod" type="text" maxlength="20" size="10" placeholder="Екатеринбург">
+      </div>
 
-      <label for="ulitsa">Укажите улицу:</label>
-      <input name="ulitsa" type="text" maxlength="20" size="20" placeholder="Академика Сахарова">
+      <div class="for_user">
+        <label for="ulitsa">Укажите улицу:</label>
+        <input name="ulitsa" type="text" maxlength="20" size="20" placeholder="Академика Сахарова">
+      </div>
 
-      <label for="dom">Укажите номер дома:</label>
-      <input name="dom" type="text" maxlength="5" size="2" placeholder="30Б">
+      <div class="for_user">
+        <label for="dom">Укажите номер дома:</label>
+        <input name="dom" type="text" maxlength="5" size="2" placeholder="30Б">
+      </div>
 
-      <label for="ofis">Укажите номер офиса</label>
-      <input name="ofis" type="text" maxlength="6" size="3" placeholder="710">
+      <div class="for_user">
+        <label for="ofis">Укажите номер офиса</label>
+        <input name="ofis" type="text" maxlength="6" size="3" placeholder="710">
+      </div>
 
       <input type="submit" value="Печать">
 

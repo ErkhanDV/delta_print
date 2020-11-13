@@ -1,0 +1,14 @@
+#print_text {
+
+	display: none;
+}
+
+input::placeholder {
+
+	text-align: center;
+}
+
+ .for_user {
+
+	visibility: block;
+}
