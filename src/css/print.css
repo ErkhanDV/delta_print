@@ -1,0 +1,16 @@
+@page {
+	margin: 0mm;
+	size: auto;
+}
+#writeln_form {
+	display: none;
+}
+#print_text {
+	display: block;
+}
+@media print {
+div.newpage {
+	page-break-after: always;
+	position: relative;
+	}
+}
