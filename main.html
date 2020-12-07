@@ -3,9 +3,12 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Delta_printer</title>
+    <title>Delta printer</title>
     <link href="src/css/main.css" rel="stylesheet">
     <link href="src/css/print.css" media="print" rel="stylesheet">
+    <link href="src/css/x-y_do.css" media="print" rel="stylesheet">
+    <link href="src/css/x-y_dm.css" media="print" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
 
 </head>
 
@@ -13,6 +16,7 @@
 
   <div id="writeln_form">
     <form id="printer">    
+      
       <div class="for_user">
         <label for="ooo">Укажите юридическое лицо клиента:</label>
         <input name="ooo" type="text" maxlength="99" size="50" placeholder="ООО Рога и копыта">
@@ -64,6 +68,11 @@
         <input name="ts" type="checkbox">
         <label for="ts">Тревожная сигнализация</label>
       </div>
+
+      <div class="for_user">  
+        <input name="vkts" type="checkbox">
+        <label for="vktsts">ВКТС</label>
+      </div>
       
       <div class="for_user">
         <input name="sms" type="checkbox">
@@ -81,8 +90,8 @@
       </div>
       
       <div class="for_user">
-        <input name="220" type="checkbox">
-        <label for="220">Сигнализация об отсутствии 220В</label>
+        <input name="v220" type="checkbox">
+        <label for="v220">Сигнализация об отсутствии 220В</label>
       </div>
       
       <div class="for_user">
@@ -107,7 +116,7 @@
 
       <div class="for_user">
         <label for="summa_mo">Укажите сумму материальной ответственности:</label>
-        <input type="text" name="summa_mo" maxlength="10" size="20" placeholder="200000 (двести тысяч)">
+        <input type="text" name="summa_mo" maxlength="100" size="20" placeholder="200000 (двести тысяч)">
       </div>
   
       <p>Укажите время реагирования:</p>
@@ -147,38 +156,122 @@
     </form>
   </div>
 
+
   <div id="print_text">
+    
+    <div class="newpage">
+      <span id="date_do1">
+      <script language="javascript" type="text/javascript" src="src/js/date.js"></script>
+      </span>
+      <span id="do_do1" class="do"></span>
+      <span id="ooo_do1" class="ooo"></span>
+      <span id="gendir_do1" class="gendir"></span>
+      <span id="summa_mo"></span>
+      &nbsp;
+    </div>
+        
+    <div class="newpage">
+      <span id="date_do2_1">
+      <script language="javascript" type="text/javascript" src="src/js/date.js"></script>
+      </span>
+      <span id="date_do2_2">
+      <script language="javascript" type="text/javascript" src="src/js/date.js"></script>
+      </span>
+      <span id="do_do2_1" class="do"></span>
+      <span id="ooo_do2" class="ooo"></span>
+      <span id="gendir_do2" class="gendir"></span>
+      <span id="inn_do2" class="inn"></span>
+      <span id="do_do2_2" class="do"></span>
+      <span id="mts_1"></span>
+      <span id="os"></span>
+      <span id="ts"></span>
+      <span id="vkts"></span>
+      <span id="sms"></span>
+      <span id="mts_2"></span>
+      <span id="ps"></span>
+      <span id="v220"></span>
+      <span id="wl"></span>
+      <span id="gl"></span>
+      <span id="so"></span>
+      <span id="vr">V</span>
+      <span id="dt"></span>
+      <span id="nt"></span>
+      <span id="dnr"></span>
+      <span id="ap"></span>
+      <span id="mes6"></span>
+      <span id="mes9"></span>
+      <span id="mes12"></span>
+      <span id="gorod_do2" class="gorod"></span>
+      <span id="ulitsa_do2" class="ulitsa"></span>
+      <span id="dom_do2" class="dom"></span>
+      <span id="ofis_do2" class="ofis"></span>
+      <p id="ofis">офис</p>
+      &nbsp;
+    </div>
+    
+    <div class="newpage">
+      <span id="date_ank_1">
+      <script language="javascript" type="text/javascript" src="src/js/date.js"></script>
+      </span>
+      <span id="date_ank_2">
+      <script language="javascript" type="text/javascript" src="src/js/date.js"></script>
+      </span>
+      <span id="do_ank" class="do"></span>
+      <p id="ank_adress_gorod">г.</p>
+      <span id="gorod_ank" class="gorod"></span>
+      <p id="ank_adress_ulitsa">ул.</p>
+      <span id="ulitsa_ank" class="ulitsa"></span>
+      <p id="ank_adress_dom">д.</p>
+      <span id="dom_ank" class="dom"></span>
+      <p id="ank_adress_ofis">офис</p>
+      <span id="ofis_ank" class="ofis"></span>
+      <span id="ooo_ank" class="ooo"></span>
+      <span id="gendir_ank" class="gendir"></span>
+      &nbsp;
+    </div>
+    
+    <div class="newpage">
+      <span id="date_dm1">
+      <script language="javascript" type="text/javascript" src="src/js/date.js"></script>
+      </span>
+      <span id="dm_dm1" class="dm"></span>    
+      <span id="ooo_dm1" class="ooo"></span>
+      <span id="gendir_dm1" class="gendir"></span>
+      <span id="gorod_dm1" class="gorod"></span>
+      <span id="ulitsa_dm1" class="ulitsa"></span>
+      <span id="dom_dm1" class="dom"></span>
+      <span id="ofis_dm1" class="ofis"></span>
+      <span id="dm_summa_dm1" class="dm_summa"></span>
+      &nbsp;
+    </div>
+    
+    <div class="newpage">
+      <span id="ooo_dm2" class="ooo"></span>
+      <span id="inn_dm2" class="inn"></span>
+      &nbsp;
+    </div>
+    
+    <div class="newpage">
+      <span id="date_apvr_1">
+      <script language="javascript" type="text/javascript" src="src/js/date.js"></script>
+      </span>
+      <span id="date_apvr_2">
+      <script language="javascript" type="text/javascript" src="src/js/date.js"></script>
+      </span>
+      <span id="date_apvr_3">
+      <script language="javascript" type="text/javascript" src="src/js/date.js"></script>
+      </span>
+      <span id="dm_apvr1_1" class="dm"></span>
+      <span id="ooo_apvr1" class="ooo"></span>
+      <span id="gendir_apvr1" class="gendir"></span>
+      <span id="dm_apvr1_2" class="dm"></span>
+      <span id="dm_summa_apvr2" class="dm_summa"></span>   
+      <span id="ooo_apvr2" class="ooo"></span>    
+      <span id="inn_apvr2" class="inn"></span>
+      &nbsp;
+    </div>
 
-    <span id="ooo"></span>
-    <span id="gendir"></span>
-    <span id="inn"></span>
-    <span id="do"></span>
-    <span id="dm"></span>
-    <span id="dm_summa"></span>
-    <span id="ap"></span>
-    <span id="dnr"></span>
-    <span id="summa_mo"></span>
-    <span id="mts_1"></span>
-    <span id="os"></span>
-    <span id="ts"></span>
-    <span id="sms"></span>
-    <span id="mts_2"></span>
-    <span id="ps"></span>
-    <span id="220"></span>
-    <span id="wl"></span>
-    <span id="gl"></span>
-    <span id="so"></span>
-    <span id="dt"></span>
-    <span id="nt"></span>
-    <span id="gorod"></span>
-    <span id="ulitsa"></span>
-    <span id="dom"></span>
-    <span id="ofis"></span>
-    <span id="6mes"></span>
-    <span id="9mes"></span>
-    <span id="12mes"></span>
-
-  </div>
+  </div>  
 
   <script src="src/js/main.js"></script> 
 
