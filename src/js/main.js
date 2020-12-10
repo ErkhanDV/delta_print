@@ -115,6 +115,8 @@
 
   }
 
+
 let form = document.getElementById('printer');
-form.addEventListener('submit', for_print);
+form.addEventListener('submit', for_print);	
+
   
