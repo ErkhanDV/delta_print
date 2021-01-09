@@ -1,20 +1,30 @@
-  function for_print(evt) {
+	function for_print(evt) {
   	evt.preventDefault();
   	
   	let formdt = new FormData(this);
-  	
+
   	let data = Object.fromEntries(formdt.entries());
-  	document.getElementById("ap").textContent = data.ap;
-  	document.getElementById("dnr").textContent = data.dnr;
-  	document.getElementById("dt").textContent = data.dt;
-  	document.getElementById("nt").textContent = data.nt;
-  	document.getElementById("summa_mo").textContent = data.summa_mo;
-  	  	
-		if (data.mts_1) {
-			document.getElementById("mts_1").textContent = "V";
-		}	else {
-			document.getElementById("mts_1").textContent = " ";
+  	let mass_1 = ["ap", "dnr", "dt", "nt", "summa_mo"];
+  	for (let item of mass_1) {
+  		document.getElementById(item).textContent = data[item];
 		}
+
+		let mass_2 = ["mts_1", "sms", "mts_2", "ps", "v220", "wl", "gl", "so" ];
+		for (let item of mass_2) {
+			if (data[item]) {
+				document.getElementById(item).textContent = "V";
+			}	else {
+				document.getElementById(item).textContent = " ";
+			}
+		}
+
+		let mass_3 = ["ooo", "gendir", "inn", "do", "dm", "dm_summa", "gorod", "ulitsa", "dom", "ofis"];
+		for (let item of mass_3) {
+			for (let spn of document.getElementsByClassName(item)) {
+  			spn.textContent = data[item];
+  		}
+  	}
+
 		if (data.os && data.ts) {
 			document.getElementById("os").textContent = "V";
 			document.getElementById("ts").textContent = "V";
@@ -39,77 +49,12 @@
 		} else {
 			document.getElementById("vkts").textContent = " ";
 		}
-		if (data.sms) {
-			document.getElementById("sms").textContent = "V";
-		}	else {
-			document.getElementById("sms").textContent = " ";
-		}
-		if (data.mts_2) {
-			document.getElementById("mts_2").textContent = "V";
-		}	else {
-			document.getElementById("mts_2").textContent = " ";
-		}
-		if (data.ps) {
-			document.getElementById("ps").textContent = "V";
-		}	else {
-			document.getElementById("ps").textContent = " ";
-		}
-		if (data.v220) {
-			document.getElementById("v220").textContent = "V";
-		}	else {
-			document.getElementById("v220").textContent = " ";
-		}
-		if (data.wl) {
-			document.getElementById("wl").textContent = "V";
-		}	else {
-			document.getElementById("wl").textContent = " ";
-		}
-		if (data.gl) {
-			document.getElementById("gl").textContent = "V";
-		}	else {
-			document.getElementById("gl").textContent = " ";
-		}
-		if (data.so) {
-			document.getElementById("so").textContent = "V";
-		}	else {
-			document.getElementById("so").textContent = " ";
-		}
 		if ((data.ts) && (data.os)) {
 			document.getElementById("mes12").textContent = "V";
 		}	else {
 			document.getElementById("mes12").textContent = " ";
 		}
 
-		for (let spn of document.getElementsByClassName("ooo")) {
-  	spn.textContent = data.ooo;
-  	}
-  	for (let spn of document.getElementsByClassName("gendir")) {
-  	spn.textContent = data.gendir;
-  	}
-		for (let spn of document.getElementsByClassName("inn")) {
-  	spn.textContent = data.inn;
-  	}
-  	for (let spn of document.getElementsByClassName("do")) {
-  	spn.textContent = data.do;
-  	}
-  	for (let spn of document.getElementsByClassName("dm")) {
-  	spn.textContent = data.dm;
-  	}
-  	for (let spn of document.getElementsByClassName("dm_summa")) {
-  	spn.textContent = data.dm_summa;
-  	}
-  	for (let spn of document.getElementsByClassName("gorod")) {
-  	spn.textContent = data.gorod;
-  	}
-  	for (let spn of document.getElementsByClassName("ulitsa")) {
-  	spn.textContent = data.ulitsa;
-  	}
-  	for (let spn of document.getElementsByClassName("dom")) {
-  	spn.textContent = data.dom;
-  	}
-  	for (let spn of document.getElementsByClassName("ofis")) {
-  	spn.textContent = data.ofis;
-  	}
   	
 		window.print();
 
@@ -117,6 +62,5 @@
 
 
 let form = document.getElementById('printer');
-form.addEventListener('submit', for_print);	
-
+form.addEventListener('submit', for_print);
   
