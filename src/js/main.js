@@ -2,8 +2,7 @@ function date_today() {
   var d = new Date();
   var month = new Array ("января","февраля","марта","апреля","мая","июня",
     "июля","августа","сентября","октября","ноября","декабря");
-  var data = (d.getDate() + " " +  month[d.getMonth()] + " " + d.getFullYear());
-  return data;
+  return `${d.getDate()} ${month[d.getMonth()]} ${d.getFullYear()}`;
 }
 
 function for_print(evt) {
@@ -32,11 +31,11 @@ function for_print(evt) {
       spn.textContent = data[item];
     }
   }
-  
+
   let new_date = date_today();
-  for (let spn of document.getElementsByClassName("date_today")) {
-  spn.textContent = new_date;
-  }
+    for (let spn of document.getElementsByClassName("date_today")) {
+      spn.textContent = new_date;
+    }
 
   if (data.os && data.ts) {
     document.getElementById("os").textContent = "V";
@@ -68,11 +67,9 @@ function for_print(evt) {
     document.getElementById("mes12").textContent = " ";
   }
 
-    
   window.print();
 
   }
-
 
 let form = document.getElementById('printer');
 form.addEventListener('submit', for_print);
