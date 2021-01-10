@@ -73,3 +73,4 @@ function for_print(evt) {
 
 let form = document.getElementById('printer');
 form.addEventListener('submit', for_print);
+  
