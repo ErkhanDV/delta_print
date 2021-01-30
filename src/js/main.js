@@ -73,4 +73,12 @@ function for_print(evt) {
 
 let form = document.getElementById('printer');
 form.addEventListener('submit', for_print);
-  
+
+function ShowFL() {
+  document.getElementById("fiz_l_form").style.display="block"
+  document.getElementById("ur_l_form").style.display="none"
+}
+function ShowUL() {
+  document.getElementById("fiz_l_form").style.display="none"
+  document.getElementById("ur_l_form").style.display="block"
+}

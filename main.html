@@ -14,485 +14,493 @@
 
 <body>
 
-  <div id="writeln_form">
-    <form id="printer">    
-      <div class="for_user">
-        <label for="ooo">Укажите юридическое лицо клиента:</label>
-        <input name="ooo" type="text" maxlength="99" size="50" placeholder="ООО Рога и копыта">
-      </div>
-      
-      <div class="for_user">
-        <label for="gendir">в лице ген. директора</label>
-        <input name="gendir" type="text" maxlength="99" size="50" placeholder="Иванов Иван Иванович">
-      </div>
-      
-      <div class="for_user">
-        <label for="inn">ИНН:&nbsp;</label>
-        <input name="inn" type="text" maxlength="12" size="10" placeholder="660000000000">
-      </div>
-    
-      <div class="for_user">
-        <label for="do">Введите номер договора охраны:</label>
-        <input name="do" type="text" maxlength="13" size="10" placeholder="66-2001-00000">
-      </div>
-
-      <div class="for_user">
-        <label for="dm">Введите номер договора монтажа:</label>
-        <input name="dm" type="text" maxlength="13" size="10" placeholder="66-2003-00000">
-      </div>
-
-      <div class="for_user">
-        <label for="dm_summa">Введите сумму договора монтажа:</label>
-        <input name="dm_summa" type="text" maxlength="5" size="5" placeholder="20000"><a>&nbsp;&#8381;</a>
-      </div>
-
-      <div class="for_user">
-        <label for="ap">Укажите сумму абонентской платы:</label>
-        <input name="ap" type="text" maxlength="5" size="6" placeholder="2000"><a>&nbsp;&#8381;</a>
-      </div>
-
-      <p>Выберите комплекс услуг:</p>
-      
-      <div class="for_user">
-        <input name="mts_1" type="checkbox"> 
-        <label for="mts_1">Мониторинг тревожных сообщений</label>
-      </div>
-      
-      <div class="for_user">
-        <input name="os" type="checkbox">
-        <label for="os">Охранная сигнализация</label>
-      </div>
-
-      <div class="for_user">  
-        <input name="ts" type="checkbox">
-        <label for="ts">Тревожная сигнализация</label>
-      </div>
-
-      <div class="for_user">  
-        <input name="vkts" type="checkbox">
-        <label for="vktsts">ВКТС</label>
-      </div>
-      
-      <div class="for_user">
-        <input name="sms" type="checkbox">
-        <label for="sms">SMS-оповещения о постановке/снятии</label>
-      </div>
-
-      <div class="for_user">
-        <input name="mts_2" type="checkbox">
-        <label for="mts_2">Мониторинг технологических сообщений</label>
-      </div>
-
-      <div class="for_user">
-        <input name="ps" type="checkbox">
-        <label for="ps">Оповещение о пожаре</label>
-      </div>
-      
-      <div class="for_user">
-        <input name="v220" type="checkbox">
-        <label for="v220">Сигнализация об отсутствии 220В</label>
-      </div>
-      
-      <div class="for_user">
-        <input name="wl" type="checkbox">
-        <label for="wl">Сигнализация о протечке воды</label>
-      </div>
-
-      <div class="for_user">
-        <input name="gl" type="checkbox">
-        <label for="gl">Сигнализация об утечке газа</label>
-      </div>
-
-      <div class="for_user">
-        <input name="so" type="checkbox">
-        <label for="so">Сервисное обслуживание</label>
-      </div>
-      
-      <div class="for_user">
-        <label for="dnr">Укажите дату начала реагирования:</label>  
-        <input name="dnr" type="text" maxlength="10" size="7" placeholder="01.01.2020">
-      </div>
-
-      <div class="for_user">
-        <label for="summa_mo">Укажите сумму материальной ответственности:</label>
-        <input type="text" name="summa_mo" maxlength="100" size="20" placeholder="200000 (двести тысяч)">
-      </div>
-  
-      <p>Укажите время реагирования:</p>
-
-      <div class="for_user">
-        <label for="dt">Днём:</label>  
-        <input name="dt" type="text" maxlength="2" size="1" placeholder="10">
-      </div>
-
-      <div class="for_user">
-        <label for="nt">Ночью:</label>
-        <input name="nt" type="text" maxlength="2" size="1" placeholder="8">
-      </div>
-
-      <div class="for_user">
-        <label for="gorod">Укажите город:</label>      
-        <input name="gorod" type="text" maxlength="20" size="10" placeholder="Екатеринбург">
-      </div>
-
-      <div class="for_user">
-        <label for="ulitsa">Укажите улицу:</label>
-        <input name="ulitsa" type="text" maxlength="20" size="20" placeholder="Академика Сахарова">
-      </div>
-
-      <div class="for_user">
-        <label for="dom">Укажите номер дома:</label>
-        <input name="dom" type="text" maxlength="5" size="2" placeholder="30Б">
-      </div>
-
-      <div class="for_user">
-        <label for="ofis">Укажите номер офиса</label>
-        <input name="ofis" type="text" maxlength="6" size="3" placeholder="710">
-      </div>
-
-      <input id="button" type="submit" value="Печать">
-
-    </form>
+  <div>
+    <input type="radio" value="fl" name="whats_your_choise" onclick="ShowUL()" checked="checked">Работа с юридическими лицами</br>
+    <input type="radio" value="ul" name="whats_your_choise" onclick="ShowFL()">Работа с физическими лицами</br>
   </div>
 
-
-  <div id="print_text">
-    <div class="newpage">
-      <span id="date_do1" class="date_today"></span>
-      <span id="do_do1" class="do"></span>
-      <span id="ooo_do1" class="ooo"></span>
-      <span id="gendir_do1" class="gendir"></span>
-      <span id="summa_mo"></span>
-      &nbsp;
-    </div>
+  <div id="ur_l_form">
+    <div id="writeln_form">
+      <form id="printer">    
+        <div class="for_user">
+          <label for="ooo">Укажите юридическое лицо клиента:</label>
+          <input name="ooo" type="text" maxlength="99" size="50" placeholder="ООО Рога и копыта">
+        </div>
         
-    <div class="newpage">
-      <span id="date_do2_1" class="date_today"></span>
-      <span id="date_do2_2" class="date_today"></span>
-      <span id="do_do2_1" class="do"></span>
-      <span id="ooo_do2" class="ooo"></span>
-      <span id="gendir_do2" class="gendir"></span>
-      <span id="inn_do2" class="inn"></span>
-      <span id="do_do2_2" class="do"></span>
-      <span id="mts_1"></span>
-      <span id="os"></span>
-      <span id="ts"></span>
-      <span id="vkts"></span>
-      <span id="sms"></span>
-      <span id="mts_2"></span>
-      <span id="ps"></span>
-      <span id="v220"></span>
-      <span id="wl"></span>
-      <span id="gl"></span>
-      <span id="so"></span>
-      <span id="vr">V</span>
-      <span id="dt"></span>
-      <span id="nt"></span>
-      <span id="dnr"></span>
-      <span id="ap"></span>
-      <span id="mes6"></span>
-      <span id="mes9"></span>
-      <span id="mes12"></span>
-      <span id="gorod_do2" class="gorod"></span>
-      <span id="ulitsa_do2" class="ulitsa"></span>
-      <span id="dom_do2" class="dom"></span>
-      <span id="ofis_do2" class="ofis"></span>
-      <p id="ofis">офис</p>
-      &nbsp;
-    </div>
-    
-    <div class="newpage">
-      <span id="date_ank_1" class="date_today"></span>
-      <span id="date_ank_2" class="date_today"></span>
-      <span id="do_ank" class="do"></span>
-      <p id="ank_adress_gorod">г.</p>
-      <span id="gorod_ank" class="gorod"></span>
-      <p id="ank_adress_ulitsa">ул.</p>
-      <span id="ulitsa_ank" class="ulitsa"></span>
-      <p id="ank_adress_dom">д.</p>
-      <span id="dom_ank" class="dom"></span>
-      <p id="ank_adress_ofis">офис</p>
-      <span id="ofis_ank" class="ofis"></span>
-      <span id="ooo_ank" class="ooo"></span>
-      <span id="gendir_ank" class="gendir"></span>
-      &nbsp;
-    </div>
-    
-    <div class="newpage">
-      <span id="date_dm1" class="date_today"></span>
-      <span id="dm_dm1" class="dm"></span>    
-      <span id="ooo_dm1" class="ooo"></span>
-      <span id="gendir_dm1" class="gendir"></span>
-      <span id="gorod_dm1" class="gorod"></span>
-      <span id="ulitsa_dm1" class="ulitsa"></span>
-      <span id="dom_dm1" class="dom"></span>
-      <span id="ofis_dm1" class="ofis"></span>
-      <span id="dm_summa_dm1" class="dm_summa"></span>
-      &nbsp;
-    </div>
-    
-    <div class="newpage">
-      <span id="ooo_dm2" class="ooo"></span>
-      <span id="inn_dm2" class="inn"></span>
-      &nbsp;
-    </div>
-    
-    <div class="newpage">
-      <span id="date_apvr_1" class="date_today"></span>
-      <span id="date_apvr_2" class="date_today"></span>
-      <span id="date_apvr_3" class="date_today"></span>
-      <span id="dm_apvr1_1" class="dm"></span>
-      <span id="ooo_apvr1" class="ooo"></span>
-      <span id="gendir_apvr1" class="gendir"></span>
-      <span id="dm_apvr1_2" class="dm"></span>
-      <span id="dm_summa_apvr2" class="dm_summa"></span>   
-      <span id="ooo_apvr2" class="ooo"></span>    
-      <span id="inn_apvr2" class="inn"></span>
-      &nbsp;
-    </div>
-  </div>
-
-  <div id="writeln_form" class="fl">
-    <form id="printer">    
-      <div class="for_user">
-        <label for="fio">Укажите ФИО клиента:</label>
-        <input name="fio" type="text" maxlength="99" size="50" placeholder="Иванов Иван Иванович">
-      </div>
-      
-      <div class="for_user">
-        <label for="bday">Дата рождения клиента:</label>
-        <input name="bday" type="text" maxlength="99" size="50" placeholder="02.03.1991">
-      </div>
-      
-      <div class="for_user">
-        <label for="pas_num">Номер и серия паспорта:&nbsp;</label>
-        <input name="pas_num" type="text" maxlength="12" size="10" placeholder="6516 216579">
-      </div>
-
-      <div class="for_user">
-        <label for="pas_date">Дата выдачи паспорта:&nbsp;</label>
-        <input name="pas_date" type="text" maxlength="12" size="10" placeholder="21.12.2020">
-      </div>
-
-      <div class="for_user">
-        <label for="pas_whoes">Кем выдан паспорт:&nbsp;</label>
-        <input name="pas_whoes" type="text" maxlength="50" size="50" placeholder="ОУФМС России по свердловской области в Ленинском районе">
-      </div>
-
-      <div class="for_user">
-        <label for="pas_propis">Адрес прописки:&nbsp;</label>
-        <input name="pas_propis" type="text" maxlength="50" size="50" placeholder="г. Екатеринбург, ул. Рощинская, д.37, кв. 122">
-      </div>
-    
-      <div class="for_user">
-        <label for="do">Введите номер договора охраны:</label>
-        <input name="do" type="text" maxlength="13" size="10" placeholder="66-2001-00000">
-      </div>
-
-      <div class="for_user">
-        <label for="dm">Введите номер договора монтажа:</label>
-        <input name="dm" type="text" maxlength="13" size="10" placeholder="66-2003-00000">
-      </div>
-
-      <div class="for_user">
-        <label for="dm_summa">Введите сумму договора монтажа:</label>
-        <input name="dm_summa" type="text" maxlength="5" size="5" placeholder="20000"><a>&nbsp;&#8381;</a>
-      </div>
-
-      <div class="for_user">
-        <label for="ap">Укажите сумму абонентской платы:</label>
-        <input name="ap" type="text" maxlength="5" size="6" placeholder="2000"><a>&nbsp;&#8381;</a>
-      </div>
-
-      <p>Выберите комплекс услуг:</p>
-      
-      <div class="for_user">
-        <input name="mts_1" type="checkbox"> 
-        <label for="mts_1">Мониторинг тревожных сообщений</label>
-      </div>
-      
-      <div class="for_user">
-        <input name="os" type="checkbox">
-        <label for="os">Охранная сигнализация</label>
-      </div>
-
-      <div class="for_user">  
-        <input name="ts" type="checkbox">
-        <label for="ts">Тревожная сигнализация</label>
-      </div>
-
-      <div class="for_user">  
-        <input name="vkts" type="checkbox">
-        <label for="vktsts">ВКТС</label>
-      </div>
-      
-      <div class="for_user">
-        <input name="sms" type="checkbox">
-        <label for="sms">SMS-оповещения о постановке/снятии</label>
-      </div>
-
-      <div class="for_user">
-        <input name="mts_2" type="checkbox">
-        <label for="mts_2">Мониторинг технологических сообщений</label>
-      </div>
-
-      <div class="for_user">
-        <input name="ps" type="checkbox">
-        <label for="ps">Оповещение о пожаре</label>
-      </div>
-      
-      <div class="for_user">
-        <input name="v220" type="checkbox">
-        <label for="v220">Сигнализация об отсутствии 220В</label>
-      </div>
-      
-      <div class="for_user">
-        <input name="wl" type="checkbox">
-        <label for="wl">Сигнализация о протечке воды</label>
-      </div>
-
-      <div class="for_user">
-        <input name="gl" type="checkbox">
-        <label for="gl">Сигнализация об утечке газа</label>
-      </div>
-
-      <div class="for_user">
-        <input name="so" type="checkbox">
-        <label for="so">Сервисное обслуживание</label>
-      </div>
-      
-      <div class="for_user">
-        <label for="dnr">Укажите дату начала реагирования:</label>  
-        <input name="dnr" type="text" maxlength="10" size="7" placeholder="01.01.2020">
-      </div>
-
-      <div class="for_user">
-        <label for="summa_mo">Укажите сумму материальной ответственности:</label>
-        <input type="text" name="summa_mo" maxlength="100" size="20" placeholder="200000 (двести тысяч)">
-      </div>
-  
-      <p>Укажите время реагирования:</p>
-
-      <div class="for_user">
-        <label for="dt">Днём:</label>  
-        <input name="dt" type="text" maxlength="2" size="1" placeholder="10">
-      </div>
-
-      <div class="for_user">
-        <label for="nt">Ночью:</label>
-        <input name="nt" type="text" maxlength="2" size="1" placeholder="8">
-      </div>
-
-      <div class="for_user">
-        <label for="gorod">Укажите город:</label>      
-        <input name="gorod" type="text" maxlength="20" size="10" placeholder="Екатеринбург">
-      </div>
-
-      <div class="for_user">
-        <label for="ulitsa">Укажите улицу:</label>
-        <input name="ulitsa" type="text" maxlength="20" size="20" placeholder="Академика Сахарова">
-      </div>
-
-      <div class="for_user">
-        <label for="dom">Укажите номер дома:</label>
-        <input name="dom" type="text" maxlength="5" size="2" placeholder="30Б">
-      </div>
-
-      <div class="for_user">
-        <label for="kvartira">Укажите номер квартиры</label>
-        <input name="kvartira" type="text" maxlength="6" size="3" placeholder="710">
-      </div>
-
-      <input id="button" type="submit" value="Печать">
-
-    </form>
-  </div>
-
-  <div id="print_text">
-    <div class="newpage">
-      <span id="date_do1" class="date_today"></span>
-      <span id="do_do1" class="do"></span>
-      <span id="summa_mo"></span>
-      &nbsp;
-    </div>
+        <div class="for_user">
+          <label for="gendir">в лице ген. директора</label>
+          <input name="gendir" type="text" maxlength="99" size="50" placeholder="Иванов Иван Иванович">
+        </div>
         
-    <div class="newpage">
-      <span id="date_do2_1" class="date_today"></span>
-      <span id="date_do2_2" class="date_today"></span>
-      <span id="fio_do2" class="fio"></span>
-      <span id="bday_do2" class="bday"></span>
-      <span id="pas_num_do2" class="pas_num"></span>
-      <span id="pas_date_do2" class="pas_date"></span>
-      <span id="pas_whoes_do2" class="pas_whoes"></span>
-      <span id="do_do2_2" class="do"></span>
-      <span id="mts_1"></span>
-      <span id="os"></span>
-      <span id="ts"></span>
-      <span id="vkts"></span>
-      <span id="sms"></span>
-      <span id="mts_2"></span>
-      <span id="ps"></span>
-      <span id="v220"></span>
-      <span id="wl"></span>
-      <span id="gl"></span>
-      <span id="so"></span>
-      <span id="vr">V</span>
-      <span id="dt"></span>
-      <span id="nt"></span>
-      <span id="dnr"></span>
-      <span id="ap"></span>
-      <span id="gorod_do2" class="gorod"></span>
-      <span id="ulitsa_do2" class="ulitsa"></span>
-      <span id="dom_do2" class="dom"></span>
-      <span id="kvartira_do2" class="kvartira"></span>
-      &nbsp;
-    </div>
+        <div class="for_user">
+          <label for="inn">ИНН:&nbsp;</label>
+          <input name="inn" type="text" maxlength="12" size="10" placeholder="660000000000">
+        </div>
+      
+        <div class="for_user">
+          <label for="do">Введите номер договора охраны:</label>
+          <input name="do" type="text" maxlength="13" size="10" placeholder="66-2001-00000">
+        </div>
+
+        <div class="for_user">
+          <label for="dm">Введите номер договора монтажа:</label>
+          <input name="dm" type="text" maxlength="13" size="10" placeholder="66-2003-00000">
+        </div>
+
+        <div class="for_user">
+          <label for="dm_summa">Введите сумму договора монтажа:</label>
+          <input name="dm_summa" type="text" maxlength="5" size="5" placeholder="20000"><a>&nbsp;&#8381;</a>
+        </div>
+
+        <div class="for_user">
+          <label for="ap">Укажите сумму абонентской платы:</label>
+          <input name="ap" type="text" maxlength="5" size="6" placeholder="2000"><a>&nbsp;&#8381;</a>
+        </div>
+
+        <p>Выберите комплекс услуг:</p>
+        
+        <div class="for_user">
+          <input name="mts_1" type="checkbox"> 
+          <label for="mts_1">Мониторинг тревожных сообщений</label>
+        </div>
+        
+        <div class="for_user">
+          <input name="os" type="checkbox">
+          <label for="os">Охранная сигнализация</label>
+        </div>
+
+        <div class="for_user">  
+          <input name="ts" type="checkbox">
+          <label for="ts">Тревожная сигнализация</label>
+        </div>
+
+        <div class="for_user">  
+          <input name="vkts" type="checkbox">
+          <label for="vktsts">ВКТС</label>
+        </div>
+        
+        <div class="for_user">
+          <input name="sms" type="checkbox">
+          <label for="sms">SMS-оповещения о постановке/снятии</label>
+        </div>
+
+        <div class="for_user">
+          <input name="mts_2" type="checkbox">
+          <label for="mts_2">Мониторинг технологических сообщений</label>
+        </div>
+
+        <div class="for_user">
+          <input name="ps" type="checkbox">
+          <label for="ps">Оповещение о пожаре</label>
+        </div>
+        
+        <div class="for_user">
+          <input name="v220" type="checkbox">
+          <label for="v220">Сигнализация об отсутствии 220В</label>
+        </div>
+        
+        <div class="for_user">
+          <input name="wl" type="checkbox">
+          <label for="wl">Сигнализация о протечке воды</label>
+        </div>
+
+        <div class="for_user">
+          <input name="gl" type="checkbox">
+          <label for="gl">Сигнализация об утечке газа</label>
+        </div>
+
+        <div class="for_user">
+          <input name="so" type="checkbox">
+          <label for="so">Сервисное обслуживание</label>
+        </div>
+        
+        <div class="for_user">
+          <label for="dnr">Укажите дату начала реагирования:</label>  
+          <input name="dnr" type="text" maxlength="10" size="7" placeholder="01.01.2020">
+        </div>
+
+        <div class="for_user">
+          <label for="summa_mo">Укажите сумму материальной ответственности:</label>
+          <input type="text" name="summa_mo" maxlength="100" size="20" placeholder="200000 (двести тысяч)">
+        </div>
     
-    <div class="newpage">
-      <span id="date_ank_1" class="date_today"></span>
-      <span id="date_ank_2" class="date_today"></span>
-      <span id="do_ank" class="do"></span>
-      <p id="ank_adress_gorod">г.</p>
-      <span id="gorod_ank" class="gorod"></span>
-      <p id="ank_adress_ulitsa">ул.</p>
-      <span id="ulitsa_ank" class="ulitsa"></span>
-      <p id="ank_adress_dom">д.</p>
-      <span id="dom_ank" class="dom"></span>
-      <p id="ank_adress_kvartira">кв.</p>
-      <span id="kvartira_ank" class="ofis"></span>
-      <span id="fio_ank" class="fio"></span>
-      &nbsp;
+        <p>Укажите время реагирования:</p>
+
+        <div class="for_user">
+          <label for="dt">Днём:</label>  
+          <input name="dt" type="text" maxlength="2" size="1" placeholder="10">
+        </div>
+
+        <div class="for_user">
+          <label for="nt">Ночью:</label>
+          <input name="nt" type="text" maxlength="2" size="1" placeholder="8">
+        </div>
+
+        <div class="for_user">
+          <label for="gorod">Укажите город:</label>      
+          <input name="gorod" type="text" maxlength="20" size="10" placeholder="Екатеринбург">
+        </div>
+
+        <div class="for_user">
+          <label for="ulitsa">Укажите улицу:</label>
+          <input name="ulitsa" type="text" maxlength="20" size="20" placeholder="Академика Сахарова">
+        </div>
+
+        <div class="for_user">
+          <label for="dom">Укажите номер дома:</label>
+          <input name="dom" type="text" maxlength="5" size="2" placeholder="30Б">
+        </div>
+
+        <div class="for_user">
+          <label for="ofis">Укажите номер офиса</label>
+          <input name="ofis" type="text" maxlength="6" size="3" placeholder="710">
+        </div>
+
+        <input id="button" type="submit" value="Печать">
+
+      </form>
     </div>
-    
-    <div class="newpage">
-      <span id="date_dm1" class="date_today"></span>
-      <span id="dm_dm1" class="dm"></span>    
-      <span id="gorod_dm1" class="gorod"></span>
-      <span id="ulitsa_dm1" class="ulitsa"></span>
-      <span id="dom_dm1" class="dom"></span>
-      <span id="kvartira_dm1" class="kvartira"></span>
-      <span id="dm_summa_dm1" class="dm_summa"></span>
-      &nbsp;
+
+    <div id="print_text">
+      <div class="newpage">
+        <span id="date_do1" class="date_today"></span>
+        <span id="do_do1" class="do"></span>
+        <span id="ooo_do1" class="ooo"></span>
+        <span id="gendir_do1" class="gendir"></span>
+        <span id="summa_mo"></span>
+        &nbsp;
+      </div>
+          
+      <div class="newpage">
+        <span id="date_do2_1" class="date_today"></span>
+        <span id="date_do2_2" class="date_today"></span>
+        <span id="do_do2_1" class="do"></span>
+        <span id="ooo_do2" class="ooo"></span>
+        <span id="gendir_do2" class="gendir"></span>
+        <span id="inn_do2" class="inn"></span>
+        <span id="do_do2_2" class="do"></span>
+        <span id="mts_1"></span>
+        <span id="os"></span>
+        <span id="ts"></span>
+        <span id="vkts"></span>
+        <span id="sms"></span>
+        <span id="mts_2"></span>
+        <span id="ps"></span>
+        <span id="v220"></span>
+        <span id="wl"></span>
+        <span id="gl"></span>
+        <span id="so"></span>
+        <span id="vr">V</span>
+        <span id="dt"></span>
+        <span id="nt"></span>
+        <span id="dnr"></span>
+        <span id="ap"></span>
+        <span id="mes6"></span>
+        <span id="mes9"></span>
+        <span id="mes12"></span>
+        <span id="gorod_do2" class="gorod"></span>
+        <span id="ulitsa_do2" class="ulitsa"></span>
+        <span id="dom_do2" class="dom"></span>
+        <span id="ofis_do2" class="ofis"></span>
+        <p id="ofis">офис</p>
+        &nbsp;
+      </div>
+      
+      <div class="newpage">
+        <span id="date_ank_1" class="date_today"></span>
+        <span id="date_ank_2" class="date_today"></span>
+        <span id="do_ank" class="do"></span>
+        <p id="ank_adress_gorod">г.</p>
+        <span id="gorod_ank" class="gorod"></span>
+        <p id="ank_adress_ulitsa">ул.</p>
+        <span id="ulitsa_ank" class="ulitsa"></span>
+        <p id="ank_adress_dom">д.</p>
+        <span id="dom_ank" class="dom"></span>
+        <p id="ank_adress_ofis">офис</p>
+        <span id="ofis_ank" class="ofis"></span>
+        <span id="ooo_ank" class="ooo"></span>
+        <span id="gendir_ank" class="gendir"></span>
+        &nbsp;
+      </div>
+      
+      <div class="newpage">
+        <span id="date_dm1" class="date_today"></span>
+        <span id="dm_dm1" class="dm"></span>    
+        <span id="ooo_dm1" class="ooo"></span>
+        <span id="gendir_dm1" class="gendir"></span>
+        <span id="gorod_dm1" class="gorod"></span>
+        <span id="ulitsa_dm1" class="ulitsa"></span>
+        <span id="dom_dm1" class="dom"></span>
+        <span id="ofis_dm1" class="ofis"></span>
+        <span id="dm_summa_dm1" class="dm_summa"></span>
+        &nbsp;
+      </div>
+      
+      <div class="newpage">
+        <span id="ooo_dm2" class="ooo"></span>
+        <span id="inn_dm2" class="inn"></span>
+        &nbsp;
+      </div>
+      
+      <div class="newpage">
+        <span id="date_apvr_1" class="date_today"></span>
+        <span id="date_apvr_2" class="date_today"></span>
+        <span id="date_apvr_3" class="date_today"></span>
+        <span id="dm_apvr1_1" class="dm"></span>
+        <span id="ooo_apvr1" class="ooo"></span>
+        <span id="gendir_apvr1" class="gendir"></span>
+        <span id="dm_apvr1_2" class="dm"></span>
+        <span id="dm_summa_apvr2" class="dm_summa"></span>   
+        <span id="ooo_apvr2" class="ooo"></span>    
+        <span id="inn_apvr2" class="inn"></span>
+        &nbsp;
+      </div>
     </div>
+  </div>
+
+  <div id="fiz_l_form" style="display:none">
+    <div id="writeln_form">
+      <form id="printer">    
+        <div class="for_user">
+          <label for="fio">Укажите ФИО клиента:</label>
+          <input name="fio" type="text" maxlength="99" size="50" placeholder="Иванов Иван Иванович">
+        </div>
+        
+        <div class="for_user">
+          <label for="bday">Дата рождения клиента:</label>
+          <input name="bday" type="text" maxlength="99" size="50" placeholder="02.03.1991">
+        </div>
+        
+        <div class="for_user">
+          <label for="pas_num">Номер и серия паспорта:&nbsp;</label>
+          <input name="pas_num" type="text" maxlength="12" size="10" placeholder="6516 216579">
+        </div>
+
+        <div class="for_user">
+          <label for="pas_date">Дата выдачи паспорта:&nbsp;</label>
+          <input name="pas_date" type="text" maxlength="12" size="10" placeholder="21.12.2020">
+        </div>
+
+        <div class="for_user">
+          <label for="pas_whoes">Кем выдан паспорт:&nbsp;</label>
+          <input name="pas_whoes" type="text" maxlength="50" size="50" placeholder="ОУФМС России по свердловской области в Ленинском районе">
+        </div>
+
+        <div class="for_user">
+          <label for="pas_propis">Адрес прописки:&nbsp;</label>
+          <input name="pas_propis" type="text" maxlength="50" size="50" placeholder="г. Екатеринбург, ул. Рощинская, д.37, кв. 122">
+        </div>
+      
+        <div class="for_user">
+          <label for="do">Введите номер договора охраны:</label>
+          <input name="do" type="text" maxlength="13" size="10" placeholder="66-2001-00000">
+        </div>
+
+        <div class="for_user">
+          <label for="dm">Введите номер договора монтажа:</label>
+          <input name="dm" type="text" maxlength="13" size="10" placeholder="66-2003-00000">
+        </div>
+
+        <div class="for_user">
+          <label for="dm_summa">Введите сумму договора монтажа:</label>
+          <input name="dm_summa" type="text" maxlength="5" size="5" placeholder="20000"><a>&nbsp;&#8381;</a>
+        </div>
+
+        <div class="for_user">
+          <label for="ap">Укажите сумму абонентской платы:</label>
+          <input name="ap" type="text" maxlength="5" size="6" placeholder="2000"><a>&nbsp;&#8381;</a>
+        </div>
+
+        <p>Выберите комплекс услуг:</p>
+        
+        <div class="for_user">
+          <input name="mts_1" type="checkbox"> 
+          <label for="mts_1">Мониторинг тревожных сообщений</label>
+        </div>
+        
+        <div class="for_user">
+          <input name="os" type="checkbox">
+          <label for="os">Охранная сигнализация</label>
+        </div>
+
+        <div class="for_user">  
+          <input name="ts" type="checkbox">
+          <label for="ts">Тревожная сигнализация</label>
+        </div>
+
+        <div class="for_user">  
+          <input name="vkts" type="checkbox">
+          <label for="vktsts">ВКТС</label>
+        </div>
+        
+        <div class="for_user">
+          <input name="sms" type="checkbox">
+          <label for="sms">SMS-оповещения о постановке/снятии</label>
+        </div>
+
+        <div class="for_user">
+          <input name="mts_2" type="checkbox">
+          <label for="mts_2">Мониторинг технологических сообщений</label>
+        </div>
+
+        <div class="for_user">
+          <input name="ps" type="checkbox">
+          <label for="ps">Оповещение о пожаре</label>
+        </div>
+        
+        <div class="for_user">
+          <input name="v220" type="checkbox">
+          <label for="v220">Сигнализация об отсутствии 220В</label>
+        </div>
+        
+        <div class="for_user">
+          <input name="wl" type="checkbox">
+          <label for="wl">Сигнализация о протечке воды</label>
+        </div>
+
+        <div class="for_user">
+          <input name="gl" type="checkbox">
+          <label for="gl">Сигнализация об утечке газа</label>
+        </div>
+
+        <div class="for_user">
+          <input name="so" type="checkbox">
+          <label for="so">Сервисное обслуживание</label>
+        </div>
+        
+        <div class="for_user">
+          <label for="dnr">Укажите дату начала реагирования:</label>  
+          <input name="dnr" type="text" maxlength="10" size="7" placeholder="01.01.2020">
+        </div>
+
+        <div class="for_user">
+          <label for="summa_mo">Укажите сумму материальной ответственности:</label>
+          <input type="text" name="summa_mo" maxlength="100" size="20" placeholder="200000 (двести тысяч)">
+        </div>
     
-    <div class="newpage">
-      <span id="fio_dm2" class="fio"></span>
-      <span id="pas_num_dm2" class="pas_num"></span>
-      <span id="pas_date_dm2" class="pas_date"></span>
-      <span id="pas_whoes_dm2" class="pas_whoes"></span>
-      &nbsp;
+        <p>Укажите время реагирования:</p>
+
+        <div class="for_user">
+          <label for="dt">Днём:</label>  
+          <input name="dt" type="text" maxlength="2" size="1" placeholder="10">
+        </div>
+
+        <div class="for_user">
+          <label for="nt">Ночью:</label>
+          <input name="nt" type="text" maxlength="2" size="1" placeholder="8">
+        </div>
+
+        <div class="for_user">
+          <label for="gorod">Укажите город:</label>      
+          <input name="gorod" type="text" maxlength="20" size="10" placeholder="Екатеринбург">
+        </div>
+
+        <div class="for_user">
+          <label for="ulitsa">Укажите улицу:</label>
+          <input name="ulitsa" type="text" maxlength="20" size="20" placeholder="Академика Сахарова">
+        </div>
+
+        <div class="for_user">
+          <label for="dom">Укажите номер дома:</label>
+          <input name="dom" type="text" maxlength="5" size="2" placeholder="30Б">
+        </div>
+
+        <div class="for_user">
+          <label for="kvartira">Укажите номер квартиры</label>
+          <input name="kvartira" type="text" maxlength="6" size="3" placeholder="710">
+        </div>
+
+        <input id="button" type="submit" value="Печать">
+
+      </form>
     </div>
-    
-    <div class="newpage">
-      <span id="date_apvr_1" class="date_today"></span>
-      <span id="date_apvr_2" class="date_today"></span>
-      <span id="date_apvr_3" class="date_today"></span>
-      <span id="dm_apvr1_1" class="dm"></span>
-      <span id="fio_apvr_1" class="fio"></span>
-      <span id="dm_apvr1_2" class="dm"></span>
-      <span id="dm_summa_apvr2" class="dm_summa"></span>   
-      <span id="fio_apvr2" class="fio"></span>
-      &nbsp;
+
+    <div id="print_text">
+      <div class="newpage">
+        <span id="date_do1" class="date_today"></span>
+        <span id="do_do1" class="do"></span>
+        <span id="summa_mo"></span>
+        &nbsp;
+      </div>
+          
+      <div class="newpage">
+        <span id="date_do2_1" class="date_today"></span>
+        <span id="date_do2_2" class="date_today"></span>
+        <span id="fio_do2" class="fio"></span>
+        <span id="bday_do2" class="bday"></span>
+        <span id="pas_num_do2" class="pas_num"></span>
+        <span id="pas_date_do2" class="pas_date"></span>
+        <span id="pas_whoes_do2" class="pas_whoes"></span>
+        <span id="do_do2_2" class="do"></span>
+        <span id="mts_1"></span>
+        <span id="os"></span>
+        <span id="ts"></span>
+        <span id="vkts"></span>
+        <span id="sms"></span>
+        <span id="mts_2"></span>
+        <span id="ps"></span>
+        <span id="v220"></span>
+        <span id="wl"></span>
+        <span id="gl"></span>
+        <span id="so"></span>
+        <span id="vr">V</span>
+        <span id="dt"></span>
+        <span id="nt"></span>
+        <span id="dnr"></span>
+        <span id="ap"></span>
+        <span id="gorod_do2" class="gorod"></span>
+        <span id="ulitsa_do2" class="ulitsa"></span>
+        <span id="dom_do2" class="dom"></span>
+        <span id="kvartira_do2" class="kvartira"></span>
+        &nbsp;
+      </div>
+      
+      <div class="newpage">
+        <span id="date_ank_1" class="date_today"></span>
+        <span id="date_ank_2" class="date_today"></span>
+        <span id="do_ank" class="do"></span>
+        <p id="ank_adress_gorod">г.</p>
+        <span id="gorod_ank" class="gorod"></span>
+        <p id="ank_adress_ulitsa">ул.</p>
+        <span id="ulitsa_ank" class="ulitsa"></span>
+        <p id="ank_adress_dom">д.</p>
+        <span id="dom_ank" class="dom"></span>
+        <p id="ank_adress_kvartira">кв.</p>
+        <span id="kvartira_ank" class="ofis"></span>
+        <span id="fio_ank" class="fio"></span>
+        &nbsp;
+      </div>
+      
+      <div class="newpage">
+        <span id="date_dm1" class="date_today"></span>
+        <span id="dm_dm1" class="dm"></span>    
+        <span id="gorod_dm1" class="gorod"></span>
+        <span id="ulitsa_dm1" class="ulitsa"></span>
+        <span id="dom_dm1" class="dom"></span>
+        <span id="kvartira_dm1" class="kvartira"></span>
+        <span id="dm_summa_dm1" class="dm_summa"></span>
+        &nbsp;
+      </div>
+      
+      <div class="newpage">
+        <span id="fio_dm2" class="fio"></span>
+        <span id="pas_num_dm2" class="pas_num"></span>
+        <span id="pas_date_dm2" class="pas_date"></span>
+        <span id="pas_whoes_dm2" class="pas_whoes"></span>
+        &nbsp;
+      </div>
+      
+      <div class="newpage">
+        <span id="date_apvr_1" class="date_today"></span>
+        <span id="date_apvr_2" class="date_today"></span>
+        <span id="date_apvr_3" class="date_today"></span>
+        <span id="dm_apvr1_1" class="dm"></span>
+        <span id="fio_apvr_1" class="fio"></span>
+        <span id="dm_apvr1_2" class="dm"></span>
+        <span id="dm_summa_apvr2" class="dm_summa"></span>   
+        <span id="fio_apvr2" class="fio"></span>
+        &nbsp;
+      </div>
     </div>
   </div>
 
