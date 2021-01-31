@@ -5,6 +5,12 @@
 #writeln_form {
 	display: none;
 }
+#writeln_form_fl {
+	display: none;
+}
+#your_choice {
+	display: none;
+}
 #print_text {
 	display: block;
 }

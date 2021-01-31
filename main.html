@@ -14,7 +14,7 @@
 
 <body>
 
-  <div>
+  <div id="your_choice">
     <input type="radio" value="fl" name="whats_your_choise" onclick="ShowUL()" checked="checked">Работа с юридическими лицами</br>
     <input type="radio" value="ul" name="whats_your_choise" onclick="ShowFL()">Работа с физическими лицами</br>
   </div>
@@ -85,33 +85,35 @@
         </div>
 
         <div class="for_user">
-          <input name="mts_2" type="checkbox">
+          <input name="so" type="checkbox">
+          <label for="so">Сервисное обслуживание</label>
+        </div>
+
+        <div class="for_user">
+          <input name="mts_2" type="checkbox" id="inviz" onchange="check()">
           <label for="mts_2">Мониторинг технологических сообщений</label>
         </div>
 
-        <div class="for_user">
-          <input name="ps" type="checkbox">
-          <label for="ps">Оповещение о пожаре</label>
-        </div>
-        
-        <div class="for_user">
-          <input name="v220" type="checkbox">
-          <label for="v220">Сигнализация об отсутствии 220В</label>
-        </div>
-        
-        <div class="for_user">
-          <input name="wl" type="checkbox">
-          <label for="wl">Сигнализация о протечке воды</label>
-        </div>
+        <div id="inviz_mts2" style="display: none;">
+          <div class="for_user">
+            <input name="ps" type="checkbox">
+            <label for="ps">Оповещение о пожаре</label>
+          </div>
+          
+          <div class="for_user">
+            <input name="v220" type="checkbox">
+            <label for="v220">Сигнализация об отсутствии 220В</label>
+          </div>
+          
+          <div class="for_user">
+            <input name="wl" type="checkbox">
+            <label for="wl">Сигнализация о протечке воды</label>
+          </div>
 
-        <div class="for_user">
-          <input name="gl" type="checkbox">
-          <label for="gl">Сигнализация об утечке газа</label>
-        </div>
-
-        <div class="for_user">
-          <input name="so" type="checkbox">
-          <label for="so">Сервисное обслуживание</label>
+          <div class="for_user">
+            <input name="gl" type="checkbox">
+            <label for="gl">Сигнализация об утечке газа</label>
+          </div>
         </div>
         
         <div class="for_user">
@@ -339,33 +341,35 @@
         </div>
 
         <div class="for_user">
-          <input name="mts_2" type="checkbox">
+          <input name="so" type="checkbox">
+          <label for="so">Сервисное обслуживание</label>
+        </div>
+
+        <div class="for_user">
+          <input name="mts_2" type="checkbox" id="inviz_fl" onchange="check_fl()">
           <label for="mts_2">Мониторинг технологических сообщений</label>
         </div>
 
-        <div class="for_user">
-          <input name="ps" type="checkbox">
-          <label for="ps">Оповещение о пожаре</label>
-        </div>
-        
-        <div class="for_user">
-          <input name="v220" type="checkbox">
-          <label for="v220">Сигнализация об отсутствии 220В</label>
-        </div>
-        
-        <div class="for_user">
-          <input name="wl" type="checkbox">
-          <label for="wl">Сигнализация о протечке воды</label>
-        </div>
+        <div id="inviz_mts2_fl" style="display: none;">
+          <div class="for_user">
+            <input name="ps" type="checkbox">
+            <label for="ps">Оповещение о пожаре</label>
+          </div>
+          
+          <div class="for_user">
+            <input name="v220" type="checkbox">
+            <label for="v220">Сигнализация об отсутствии 220В</label>
+          </div>
+          
+          <div class="for_user">
+            <input name="wl" type="checkbox">
+            <label for="wl">Сигнализация о протечке воды</label>
+          </div>
 
-        <div class="for_user">
-          <input name="gl" type="checkbox">
-          <label for="gl">Сигнализация об утечке газа</label>
-        </div>
-
-        <div class="for_user">
-          <input name="so" type="checkbox">
-          <label for="so">Сервисное обслуживание</label>
+          <div class="for_user">
+            <input name="gl" type="checkbox">
+            <label for="gl">Сигнализация об утечке газа</label>
+          </div>
         </div>
         
         <div class="for_user">
