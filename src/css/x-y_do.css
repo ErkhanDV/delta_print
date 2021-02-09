@@ -1,259 +1,317 @@
 #do_do1 {
-	position: absolute;
-	top: 0.7cm;
-	left: 6cm;
+  position: absolute;
+  top: 0.7cm;
+  left: 6cm;
 }
 #date_do1 {
-	position: absolute;
-	top: 1.3cm;
-	left: 9cm;
+  position: absolute;
+  top: 1.3cm;
+  left: 9cm;
 }
 #ooo_do1 {
-	position: absolute;
-	top: 2.2cm;
-	left: 6.5cm;
-	font-size: 0.6em;
+  position: absolute;
+  top: 2.2cm;
+  left: 6.5cm;
+  font-size: 0.6em;
 }
 #gendir_do1 {
-	position: absolute;
-	top: 2.5cm;
-	left: 5.5cm;
-	font-size: 0.6em;
+  position: absolute;
+  top: 2.5cm;
+  left: 5.5cm;
+  font-size: 0.6em;
 }
 #summa_mo {
-	position: absolute;
-	top: 17.6cm;
-	left: 15.5cm;
-	font-size: 0.6em;
+  position: absolute;
+  top: 17.6cm;
+  left: 15.5cm;
+  font-size: 0.6em;
 }
 
 #do_do2_1 {
-	position: absolute;
-	top: 2.3cm;
-	left: 3.5cm;
+  position: absolute;
+  top: 2.3cm;
+  left: 3.5cm;
 }
 #ooo_do2 {
-	position: absolute;
-	top: 3.2cm;
-	left: 3.5cm;
-	font-size: 0.6em;
+  position: absolute;
+  top: 3.2cm;
+  left: 3.5cm;
+  font-size: 0.6em;
 }
 #date_do2_1 {
-	position: absolute;
-	top: 2.4cm;
-	left: 9cm;
+  position: absolute;
+  top: 2.4cm;
+  left: 9cm;
 }
 #gendir_do2 {
-	position: absolute;
-	top: 2.9cm;
-	left: 2.8cm;
-	font-size: 0.6em;
+  position: absolute;
+  top: 2.9cm;
+  left: 2.8cm;
+  font-size: 0.6em;
 }
 #inn_do2 {
-	position: absolute;
-	top: 4.5cm;
-	left: 1.5cm;
+  position: absolute;
+  top: 4.5cm;
+  left: 1.5cm;
+}
+#fio_do2_fl {
+  position: absolute;
+  top: 3.2cm;
+  left: 1.5cm;
+}
+#bday_do2_fl {
+  position: absolute;
+  top: 3.8cm;
+  left: 5cm;
+  font-size: 0.8em;
+}
+#pas_num_do2_fl {
+  position: absolute;
+  top: 4cm;
+  left: 3cm;
+}
+#pas_date_do2_fl {
+  position: absolute;
+  top: 4cm;
+  left: 9.2cm;
+}
+#pas_whoes_do2_fl {
+  position: absolute;
+  top: 4.7cm;
+  left: 2cm;
+  font-size: 0.6em;
+}
+#pas_propis_do2 {
+  position: absolute;
+  top: 5.2cm;
+  left: 2cm;
+  font-size: 0.6em;
 }
 #do_do2_2 {
-	position: absolute;
-	top: 1.9cm;
-	left: 18cm;
+  position: absolute;
+  top: 1.9cm;
+  left: 18cm;
 }
 #date_do2_2 {
-	position: absolute;
-	top: 1.9cm;
-	left: 21.7cm;
+  position: absolute;
+  top: 1.9cm;
+  left: 21.7cm;
 }
 #mts_1 {
-	position: absolute;
-	top: 3.6cm;
-	left: 14.9cm;
+  position: absolute;
+  top: 3.6cm;
+  left: 14.9cm;
 }
 #os {
-	position: absolute;
-	top: 3.9cm;
-	left: 18.2cm;
-	font-size: 0.6em;
+  position: absolute;
+  top: 3.9cm;
+  left: 18.2cm;
+  font-size: 0.6em;
 }
 #ts {
-	position: absolute;
-	top: 3.6cm;
-	left: 18.2cm;
-	font-size: 0.6em;
+  position: absolute;
+  top: 3.6cm;
+  left: 18.2cm;
+  font-size: 0.6em;
 }
 #vkts {
-	position: absolute;
-	top: 3.6cm;
-	left: 21.2cm;
-	font-size: 0.6em;
+  position: absolute;
+  top: 3.6cm;
+  left: 21.2cm;
+  font-size: 0.6em;
 }
 #sms {
-	position: absolute;
-	top: 3.9cm;
-	left: 24.5cm;
-	font-size: 0.6em;
+  position: absolute;
+  top: 3.9cm;
+  left: 24.5cm;
+  font-size: 0.6em;
 }
 #mts_2 {
-	position: absolute;
-	top: 4.7cm;
-	left: 14.9cm;
+  position: absolute;
+  top: 4.7cm;
+  left: 14.9cm;
 }
 #ps {
-	position: absolute;
-	top: 5.6cm;
-	left: 18.2cm;
-	font-size: 0.6em;
+  position: absolute;
+  top: 5.6cm;
+  left: 18.2cm;
+  font-size: 0.6em;
 }
 #v220 {
-	position: absolute;
-	top: 6cm;
-	left: 18.2cm;
-	font-size: 0.6em;
+  position: absolute;
+  top: 6cm;
+  left: 18.2cm;
+  font-size: 0.6em;
 }
 #wl {
-	position: absolute;
-	top: 5.3cm;
-	left: 18.2cm;
-	font-size: 0.6em;
+  position: absolute;
+  top: 5.3cm;
+  left: 18.2cm;
+  font-size: 0.6em;
 }
 #gl {
-	position: absolute;
-	top: 4.6cm;
-	left: 18.2cm;
-	font-size: 0.6em;
+  position: absolute;
+  top: 4.6cm;
+  left: 18.2cm;
+  font-size: 0.6em;
 }
 #so {
-	position: absolute;
-	top: 8.3cm;
-	left: 14.9cm;
+  position: absolute;
+  top: 8.3cm;
+  left: 14.9cm;
 }
 #vr {
-	position: absolute;
-	top: 6.4cm;
-	left: 14.9cm;
+  position: absolute;
+  top: 6.4cm;
+  left: 14.9cm;
 }
 #dt {
-	position: absolute;
-	top: 6.9cm;
-	left: 17.6cm;
+  position: absolute;
+  top: 6.9cm;
+  left: 17.6cm;
 }
 #nt {
-	position: absolute;
-	top: 7.5cm;
-	left: 17.6cm;
+  position: absolute;
+  top: 7.5cm;
+  left: 17.6cm;
 }
 #dnr {
-	position: absolute;
-	top: 9.4cm;
-	left: 24.3cm;
+  position: absolute;
+  top: 9.4cm;
+  left: 24.3cm;
 }
 #ap {
-	position: absolute;
-	top: 10cm;
-	left: 21.7cm;
+  position: absolute;
+  top: 10cm;
+  left: 21.7cm;
 }
 #mes6 {
-	position: absolute;
-	top: 10.8cm;
-	left: 14.9cm;
+  position: absolute;
+  top: 10.8cm;
+  left: 14.9cm;
 }
 #mes9 {
-	position: absolute;
-	top: 11.1cm;
-	left: 14.9cm;
+  position: absolute;
+  top: 11.1cm;
+  left: 14.9cm;
 }
 #mes12 {
-	position: absolute;
-	top: 11.7cm;
-	left: 14.9cm;
+  position: absolute;
+  top: 11.7cm;
+  left: 14.9cm;
 }
 #gorod_do2 {
-	position: absolute;
-	top: 15.3cm;
-	left: 15.7cm;
+  position: absolute;
+  top: 15.3cm;
+  left: 15.7cm;
 }
 #ulitsa_do2 {
-	position: absolute;
-	top: 15.9cm;
-	left: 15.7cm;
+  position: absolute;
+  top: 15.9cm;
+  left: 15.7cm;
 }
 #dom_do2 {
-	position: absolute;
-	top: 15.9cm;
-	left: 21.2cm;
+  position: absolute;
+  top: 15.9cm;
+  left: 21.2cm;
 }
 #ofis_do2 {
-	position: absolute;
-	top: 16.4cm;
-	left: 26.8cm;
+  position: absolute;
+  top: 16.4cm;
+  left: 26.8cm;
+}
+#ob_number_do2 {
+  position: absolute;
+  top: 13.4cm;
+  left: 15.7cm;
 }
 #ofis {
-	position: absolute;
-	top: 16cm;
-	left: 25.2cm;
+  position: absolute;
+  top: 16cm;
+  left: 25.2cm;
 }
 #do_ank {
-	position: absolute;
-	top: 1.5cm;
-	left: 11.5cm;
+  position: absolute;
+  top: 1.5cm;
+  left: 11.5cm;
 }
 #date_ank_1 {
-	position: absolute;
-	top: 1.5cm;
-	left: 15.2cm;
+  position: absolute;
+  top: 1.5cm;
+  left: 15.2cm;
 }
 #date_ank_2 {
-	position: absolute;
-	top: 19.4cm;
-	left: 21.6cm;
+  position: absolute;
+  top: 19.4cm;
+  left: 21.6cm;
+}
+#ob_number_ank {
+  position: absolute;
+  top: 2cm;
+  left: 3cm;
 }
 #gorod_ank {
-	position: absolute;
-	top: 3.1cm;
-	left: 4.5cm;
+  position: absolute;
+  top: 3.1cm;
+  left: 4.5cm;
 }
 #ank_adress_gorod {
-	position: absolute;
-	top: 2.7cm;
-	left: 4cm;
+  position: absolute;
+  top: 2.7cm;
+  left: 4cm;
 }
 #ulitsa_ank {
-	position: absolute;
-	top: 3.1cm;
-	left: 11.8cm;
+  position: absolute;
+  top: 3.1cm;
+  left: 11.8cm;
 }
 #ank_adress_ulitsa {
-	position: absolute;
-	top: 2.7cm;
-	left: 11cm;
+  position: absolute;
+  top: 2.7cm;
+  left: 11cm;
 }
 #dom_ank {
-	position: absolute;
-	top: 3.1cm;
-	left: 19.6cm;
+  position: absolute;
+  top: 3.1cm;
+  left: 19.6cm;
 }
 #ank_adress_dom {
-	position: absolute;
-	top: 2.7cm;
-	left: 19cm;
+  position: absolute;
+  top: 2.7cm;
+  left: 19cm;
 }
 #ofis_ank {
-	position: absolute;
-	top: 3.1cm;
-	left: 22.4cm;
+  position: absolute;
+  top: 3.1cm;
+  left: 22.4cm;
+}
+#kvartira_ank_fl {
+  position: absolute;
+  top: 3.1cm;
+  left: 22.4cm;
+}
+#ank_adress_kvartira_fl {
+  position: absolute;
+  top: 2.7cm;
+  left: 21cm;
+}
+#fio_ank_fl {
+  position: absolute;
+  top: 5.7cm;
+  left: 4cm;
 }
 #ank_adress_ofis {
-	position: absolute;
-	top: 2.7cm;
-	left: 21cm;
+  position: absolute;
+  top: 2.7cm;
+  left: 21cm;
 }
 #ooo_ank {
-	position: absolute;
-	top: 4cm;
-	left: 3cm;
+  position: absolute;
+  top: 4cm;
+  left: 3cm;
 }
 #gendir_ank {
-	position: absolute;
-	top: 4.7cm;
-	left: 2.5cm;
+  position: absolute;
+  top: 4.7cm;
+  left: 2.5cm;
 }

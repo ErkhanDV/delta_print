@@ -7,9 +7,3 @@ input::placeholder {
  .for_user {
 	visibility: block;
 }
-#ur_l_form {
-	display: block;
-}
-#fl:checked ~ #ur_l_form {
-	display: block;
-}
