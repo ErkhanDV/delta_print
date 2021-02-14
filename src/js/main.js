@@ -12,7 +12,8 @@ function main_date() {
   mdate.value = date_today();
 }
 
-function formattedDate(d = new Date) {
+function formattedDate(d=null) {
+  d = d || new Date;
   let month = String(d.getMonth() + 1);
   let day = String(d.getDate());
   const year = String(d.getFullYear());
@@ -24,14 +25,13 @@ function formattedDate(d = new Date) {
 }
 
 function dnr_date() {
-  let dnr_date = document.getElementById("dnrdate");
-  dnr_date.value = formattedDate();
+  document.getElementById("dnrdate")value = formattedDate();
 }
 
-document.addEventListener("DOMContentLoaded", function()
-  { main_date();
-    ShowUL();
-    dnr_date();
+document.addEventListener("DOMContentLoaded", function() {
+  main_date();
+  ShowUL();
+  dnr_date();
  }, false);
 
 function empty_ul() {
@@ -56,8 +56,7 @@ function empty_fl () {
 
 function for_print(evt) {
 
-  let renew_span = document.querySelectorAll("span")
-  for (let item of renew_span) {
+  for (let item of document.querySelectorAll("span")) {
     item.textContent = "";
   }
   
