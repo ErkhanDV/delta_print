@@ -25,7 +25,7 @@ function formattedDate(d=null) {
 }
 
 function dnr_date() {
-  document.getElementById("dnrdate")value = formattedDate();
+  document.getElementById("dnrdate").value = formattedDate();
 }
 
 document.addEventListener("DOMContentLoaded", function() {
