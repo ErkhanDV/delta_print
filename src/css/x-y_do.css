@@ -157,12 +157,12 @@
 }
 #so {
   position: absolute;
-  top: 8.3cm;
+  top: 8.6cm;
   left: 14.9cm;
 }
 #vr {
   position: absolute;
-  top: 6.4cm;
+  top: 6cm;
   left: 14.9cm;
 }
 #dt {
@@ -187,17 +187,17 @@
 }
 #mes6 {
   position: absolute;
-  top: 10.8cm;
+  top: 11.1cm;
   left: 14.9cm;
 }
 #mes9 {
   position: absolute;
-  top: 11.1cm;
+  top: 11.4cm;
   left: 14.9cm;
 }
 #mes12 {
   position: absolute;
-  top: 11.7cm;
+  top: 12cm;
   left: 14.9cm;
 }
 #gorod_do2 {
@@ -222,7 +222,7 @@
 }
 #ob_number_do2 {
   position: absolute;
-  top: 13.4cm;
+  top: 13cm;
   left: 15.7cm;
 }
 #ofis {
@@ -247,53 +247,43 @@
 }
 #ob_number_ank {
   position: absolute;
-  top: 2cm;
+  top: 2.5cm;
   left: 3cm;
 }
 #gorod_ank {
-  position: absolute;
-  top: 3.1cm;
-  left: 4.5cm;
+  display: inline-block;
 }
 #ank_adress_gorod {
+  display: inline-block;
+}
+#adress_inline_ul {
   position: absolute;
   top: 2.7cm;
   left: 4cm;
 }
 #ulitsa_ank {
-  position: absolute;
-  top: 3.1cm;
-  left: 11.8cm;
+  display: inline-block;
 }
 #ank_adress_ulitsa {
-  position: absolute;
-  top: 2.7cm;
-  left: 11cm;
+  display: inline-block;
 }
 #dom_ank {
-  position: absolute;
-  top: 3.1cm;
-  left: 19.6cm;
+  display: inline-block;
 }
 #ank_adress_dom {
-  position: absolute;
-  top: 2.7cm;
-  left: 19cm;
+  display: inline-block;
 }
 #ofis_ank {
-  position: absolute;
-  top: 3.1cm;
-  left: 22.4cm;
+  display: inline-block;
+}
+#ofis_ank_p {
+  display: inline-block;
 }
 #kvartira_ank_fl {
-  position: absolute;
-  top: 3.1cm;
-  left: 22.4cm;
+  display: inline-block;
 }
 #ank_adress_kvartira_fl {
-  position: absolute;
-  top: 2.7cm;
-  left: 21cm;
+  display: inline-block;
 }
 #fio_ank_fl {
   position: absolute;
@@ -301,9 +291,7 @@
   left: 4cm;
 }
 #ank_adress_ofis {
-  position: absolute;
-  top: 2.7cm;
-  left: 21cm;
+  display: inline-block;
 }
 #ooo_ank {
   position: absolute;
@@ -314,4 +302,32 @@
   position: absolute;
   top: 4.7cm;
   left: 2.5cm;
+}
+#gorod_ank_fl {
+  display: inline-block;
+}
+#adress_inline_fl {
+  position: absolute;
+  top: 2.7cm;
+  left: 4cm;
+}
+#ank_adress_gorod_fl {
+  display: inline-block;
+}
+#ulitsa_ank_fl {
+  display: inline-block;
+}
+#ank_adress_ulitsa_fl {
+  display: inline-block;
+}
+#dom_ank_fl {
+  display: inline-block;
+}
+#ank_adress_dom_fl {
+  display: inline-block;
+}
+#kvartira_do2_fl {
+  position: absolute;
+  top: 15.9cm;
+  left: 23.2cm;
 }

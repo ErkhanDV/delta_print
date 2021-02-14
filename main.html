@@ -108,7 +108,7 @@
           
           <div class="for_user">
             <label for="dnr">Укажите дату начала реагирования:</label>  
-            <input name="dnr" type="text" maxlength="10" size="7" value="10.10.2021">
+            <input name="dnr" type="text" maxlength="10" size="7" id="dnrdate" value="">
           </div>
 
           <div class="for_user">
@@ -153,7 +153,7 @@
 
           <div class="for_user">
             <label for="ofis">Укажите номер офиса</label>
-            <input id="ofis_number" name="ofis" type="text" maxlength="6" size="3" placeholder="710">
+            <input id="ofis_number" name="ofis" type="text" maxlength="6" size="3" value="" placeholder="710">
           </div>
 
           <div class="for_user">
@@ -177,7 +177,7 @@
 
           <div class="for_user">
             <label for="kvartira">Укажите номер квартиры</label>
-            <input name="kvartira" id="kvartira_number" type="text" maxlength="6" size="3" placeholder="710">
+            <input name="kvartira" id="kvartira_number" type="text" maxlength="6" size="3" value="" placeholder="710">
           </div>
 
           <div class="for_user">
@@ -248,7 +248,7 @@
         <span id="wl"></span>
         <span id="gl"></span>
         <span id="so"></span>
-        <span id="vr">V</span>
+        <p id="vr">V</p>
         <span id="dt"></span>
         <span id="nt"></span>
         <span id="dnr"></span>
@@ -287,28 +287,35 @@
         <span id="date_ank_1" class="main_date"></span>
         <span id="date_ank_2" class="main_date"></span>
         <span id="do_ank" class="do"></span>
-        <p id="ank_adress_gorod">г.</p>
-        <span id="gorod_ank" class="gorod"></span>
-        <p id="ank_adress_ulitsa">ул.</p>
-        <span id="ulitsa_ank" class="ulitsa"></span>
-        <p id="ank_adress_dom">д.</p>
-        <span id="dom_ank" class="dom"></span>
         <span id="ob_number_ank" class="ob_number"></span>
-
         <div class="only_ul">
-          <div class="ofis_inviz">
-          <p id="ank_adress_ofis">офис</p>
+          <div id="adress_inline_ul">
+            <p id="ank_adress_gorod">г.</p>
+            <span id="gorod_ank" class="gorod"></span>
+            <p id="ank_adress_ulitsa">ул.</p>
+            <span id="ulitsa_ank" class="ulitsa"></span>
+            <p id="ank_adress_dom">д.</p>
+            <span id="dom_ank" class="dom"></span>
+            <p id="ofis_ank_p" class="ofis_inviz">офис</p>
+            <span id="ofis_ank" class="ofis"></span>
           </div>
-          <span id="ofis_ank" class="ofis"></span>
           <span id="ooo_ank" class="ooo"></span>
           <span id="gendir_ank" class="gendir"></span>
         </div>
 
         <div class="only_fl">
-          <div class="kv_inviz">
-          <p id="ank_adress_kvartira_fl">кв.</p>
+          <div id="adress_inline_fl">
+            <p id="ank_adress_gorod_fl">г.</p>
+            <span id="gorod_ank_fl" class="gorod"></span>
+            <p id="ank_adress_ulitsa_fl">ул.</p>
+            <span id="ulitsa_ank_fl" class="ulitsa"></span>
+            <p id="ank_adress_dom_fl">д.</p>
+            <span id="dom_ank_fl" class="dom"></span>
+            <div id="kv_inviz_ank">
+              <p id="ank_adress_kvartira_fl">кв.</p>
+            </div>
+            <span id="kvartira_ank_fl" class="kvartira"></span>
           </div>
-          <span id="kvartira_ank_fl" class="kvartira"></span>
           <span id="fio_ank_fl" class="fio"></span>
         </div>
         &nbsp;

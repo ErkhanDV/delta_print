@@ -1,4 +1,5 @@
 var check_ul_fl = true;
+
 function date_today() {
   var d = new Date();
   var month = new Array ("января","февраля","марта","апреля","мая","июня",
@@ -11,12 +12,55 @@ function main_date() {
   mdate.value = date_today();
 }
 
+function formattedDate(d = new Date) {
+  let month = String(d.getMonth() + 1);
+  let day = String(d.getDate());
+  const year = String(d.getFullYear());
+
+  if (month.length < 2) month = '0' + month;
+  if (day.length < 2) day = '0' + day;
+
+  return `${day}.${month}.${year}`;
+}
+
+function dnr_date() {
+  let dnr_date = document.getElementById("dnrdate");
+  dnr_date.value = formattedDate();
+}
+
 document.addEventListener("DOMContentLoaded", function()
- {
-     main_date();
+  { main_date();
+    ShowUL();
+    dnr_date();
  }, false);
 
+function empty_ul() {
+  let display_funk = "";
+  if (document.getElementById("ofis_number").value === "") {
+    display_funk = "none";
+  } else {
+    display_funk = "inline";
+  }
+  for (let item of document.getElementsByClassName("ofis_inviz")) {
+    item.style.display = display_funk;
+  }
+}
+
+function empty_fl () {
+  if (document.getElementById("kvartira_number").value === "") {
+    document.getElementById("kv_inviz_ank").style.display = "none";
+  } else {
+    document.getElementById("kv_inviz_ank").style.display = "inline";
+  }
+}
+
 function for_print(evt) {
+
+  let renew_span = document.querySelectorAll("span")
+  for (let item of renew_span) {
+    item.textContent = "";
+  }
+  
   evt.preventDefault();
     
   let formdt = new FormData(this);
@@ -97,7 +141,10 @@ function for_print(evt) {
         spn.textContent = data[item];
         }
       }
-  } 
+  }
+
+  empty_fl();
+  empty_ul();
 
   window.print();
 }
@@ -107,24 +154,24 @@ form.addEventListener('submit', for_print);
 
 function ShowFL() {
   let fl_array = document.getElementsByClassName("only_fl");
-    for (let i = 0; i < fl_array.length; i ++) {
-      fl_array[i].style.display = "block";
-    }
+  for (let item of fl_array) {
+    item.style.display = "block";
+  }
   let ul_array = document.getElementsByClassName("only_ul");
-    for (let i = 0; i < ul_array.length; i ++) {
-      ul_array[i].style.display = "none";
-    }
+  for (let item of ul_array) {
+    item.style.display = "none";
+  }
   check_ul_fl = false;
 }
 function ShowUL() {
   let fl_array = document.getElementsByClassName("only_fl");
-    for (let i = 0; i < fl_array.length; i ++) {
-      fl_array[i].style.display = "none";
-    }
+  for (let item of fl_array) {
+    item.style.display = "none";
+  }
   let ul_array = document.getElementsByClassName("only_ul");
-    for (let i = 0; i < ul_array.length; i ++) {
-      ul_array[i].style.display = "block";
-    }
+  for (let item of ul_array) {
+    item.style.display = "block";
+  }
   check_ul_fl = true;
 }
 
