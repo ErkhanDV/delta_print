@@ -65,33 +65,43 @@ function for_print(evt) {
   let formdt = new FormData(this);
 
   let data = Object.fromEntries(formdt.entries());
-  let mass_1 = [ "ap", "dnr", "dt", "nt", "summa_mo" ];
+  let mass_1 = [ "ap", "dnr", "dt", "nt" ];
   for (let item of mass_1) {
-    document.getElementById(item).textContent = data[item];
-  }
-
-  let mass_2 = [ "mts_1", "sms", "mts_2", "ps", "v220", "wl", "gl", "so" ];
-  for (let item of mass_2) {
-    if (data[item]) {
-      document.getElementById(item).textContent = "V";
-    } else {
-      document.getElementById(item).textContent = " ";
+    for (let cells of document.getElementsByClassName(item)) {
+      cells.textContent = data[item];
     }
   }
 
-  let mass_3 = [ "do", "dm", "dm_summa", "gorod", "ulitsa", "dom", "main_date", "ob_number" ];
+  let mass_2 = [ "mts_1", "sms", "mts_2", "ps", "v220", "wl", "gl", "so" ];
+  let jackdaw = "";
+  for (let item of mass_2) {
+    if (data[item]) {
+      jackdaw = "V";
+    } else {
+      jackdaw = "";
+    }
+    for (let jacks of document.getElementsByClassName(item)) {
+      jacks.textContent = jackdaw;
+    }
+  }
+
+  let mass_3 = [ "do", "dm", "dm_summa", "gorod", "ulitsa", "dom", "main_date", "ob_number", "summa_mo" ];
   for (let item of mass_3) {
     for (let spn of document.getElementsByClassName(item)) {
       spn.textContent = data[item];
     }
   }
 
+  let vkts = "";
   if (data.ts && data.vkts) {
-      document.getElementById("vkts").textContent = "+ВКТС";
-    } else if (data.vkts) {
-      document.getElementById("vkts").textContent = "ВКТС";
-    } else {
-      document.getElementById("vkts").textContent = " ";
+    vkts = "+ВКТС";
+  } else if (data.vkts) {
+    vkts = "ВКТС";
+  } else {
+    vkts = "";
+  }
+  for (let item of document.getElementsByClassName("vkts")) {
+      item.textContent = vkts;
   }
 
   if (check_ul_fl) {
@@ -127,11 +137,15 @@ function for_print(evt) {
     }
   } else {
     let mass_5 = [ "os", "ts" ];
+    let os_ts = "";
       for (let item of mass_5) {
         if (data[item]) {
-          document.getElementById(item).textContent = "V";
+          os_ts = "V";
         } else {
-          document.getElementById(item).textContent = " ";
+          os_ts = " ";
+        }
+        for (let cell of document.getElementsByClassName(item)) {
+          cell.textContent = os_ts;
         }
       }
     let mass_6 = [ "fio", "bday", "pas_num", "pas_date", "pas_whoes", "pas_propis", "kvartira" ];
